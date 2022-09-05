@@ -1,0 +1,119 @@
+﻿@page
+@model Esportes.Pages.dota2Model
+@{
+    ViewData["Title"] = "Dota 2";
+    ViewData["Name"] = "Dota 2";
+    ViewData["Alias"] = "Dota";
+
+    ViewData["Vendor"] = "Steam";
+    ViewData["GamePage"] = "";
+
+    var background = "./images/bg-dota2.jpg";
+
+    var firstParTitle = "Sobre " + ViewData["Alias"];
+    var firstParText = "Dota 2 (Defense of the Ancients 2) é um jogo eletrônico gratuito do gênero batalha multijogador, desenvolvido pela produtora Valve Corporation como sequência do Defense of the Ancients (DotA, uma modificação em um mapa desenvolvido para o jogo Warcraft III: The Frozen Throne), lançado em julho de 2013 na plataforma.";
+
+    var secondParTitle = "O Competitivo";
+    var secondParText = "Consolidado em outras partes do mundo, mas ainda em expansão no Brasil, o cenário competitivo de DotA 2 é bastante conhecido pelas premiações multimilionárias. Apenas o The International, campeonato mundial do jogo, distribuiu US$ 25,5 milhões (R$ 94 milhões) entre os times participantes da edição de 2018. O giro de capital é um estímulo para o surgimento de novos atletas e equipes – fato que tem forçado a Valve, desenvolvedora do game, a investir na estrutura que rege os eventos internacionais.";
+
+    var firstCardImg = "https://cdn.akamai.steamstatic.com/apps/dota2/images/blogfiles/blog_frankfurt_major_16_teams.jpg";
+    var fistCardRef = "";
+
+
+    var secondCardImg = "https://i.ytimg.com/vi/6wS5gOYeJsI/hqdefault.jpg";
+    var secondCardRef = "";
+
+
+    var thirdCardImg = "https://c4.wallpaperflare.com/wallpaper/713/248/886/logo-game-dota-dota-2-wallpaper-preview.jpg";
+
+}
+
+
+<!--Main layout-->
+<main class="mt-5">
+    <div class="text-center ">
+        <h1 class="display-4 tracking-in-expand">@ViewData["Title"]</h1>
+    </div>
+    <div class="container">
+        <!--Section: Content-->
+        <section>
+            <div class="row">
+                <div class="col-md-6 gx-5 mb-4">
+                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                        <img src="@background" class="img-fluid rounded-3" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 gx-5 mb-4">
+                    <h4><strong>@firstParTitle</strong></h4>
+                    <p class="text-muted">@firstParText</p>
+                    <p><strong>@secondParTitle</strong></p>
+                    <p class="text-muted">@secondParText</p>
+                </div>
+            </div>
+        </section>
+        <!--Section: Content-->
+
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+            <h4 class="mb-5"><strong>Mais sobre @ViewData["Title"]</strong></h4>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@firstCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Times de @ViewData["Alias"]</h5>
+                            <p class="card-text">Clique em saiba mais para conhecer os maiores times de @ViewData["Name"]</p>
+                            <a href="@fistCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@secondCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Curiosidades de @ViewData["Alias"]</h5>
+                            <p class="card-text">Veja algumas curioidades sobre @ViewData["Alias"]</p>
+                            <a href="@secondCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@thirdCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Disponivel em @ViewData["Vendor"]</h5>
+                            <p class="card-text">Encontre @ViewData["Alias"] em @ViewData["Vendor"] e jogue agora mesmo!</p>
+                            <a href="@ViewData["GamePage"]" target="_blank" class="btn btn-primary">Página do Jogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section: Content-->
+    </div>
+</main>
+<!--Main layout-->

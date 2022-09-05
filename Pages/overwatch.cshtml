@@ -1,0 +1,118 @@
+﻿@page
+@model Esportes.Pages.overwatchModel
+@{
+    ViewData["Title"] = "Overwatch";
+    ViewData["Name"] = "Overwatch";
+    ViewData["Alias"] = "Overwatch";
+
+    ViewData["Vendor"] = "Blizzard";
+    ViewData["GamePage"] = "https://playoverwatch.com/pt-br/";
+
+    var background = "./images/bg-overwatch.jpg";
+
+    var firstParTitle = "Sobre "+ViewData["Alias"];
+    var firstParText = "Overwatch é um jogo eletrônico multijogador de tiro em primeira pessoa desenvolvido e publicado pela Blizzard Entertainment. Foi lançado em 24 de maio de 2016 para Microsoft Windows, PlayStation 4 e Xbox One e em 15 de outubro de 2019 para Nintendo Switch.";
+    var secondParTitle = "O Competitivo";
+    var secondParText = "Overwatch faz bonito no cenário competitivo, sendo pioneiro no esporte eletrônico num formato de franquias baseadas em cidades e promovendo altas premiações nos torneios, sobretudo na Overwatch League.";
+
+    var firstCardImg = "./images/overwatch-card1.jpg";
+    var fistCardRef = "";
+
+
+    var secondCardImg = "https://s2.glbimg.com/v85iBlKvKLApS9GCEJUli9w4nz0=/0x0:1500x1000/984x0/smart/filters:strip_icc()/s.glbimg.com/po/tt2/f/original/2014/11/08/img_9940.jpg";
+    var secondCardRef = "https://www.techtudo.com.br/listas/2017/11/confira-dez-curiosidades-sobre-overwatch.ghtml";
+
+
+    var thirdCardImg = "https://c4.wallpaperflare.com/wallpaper/262/15/662/overwatch-4k-picture-hd-wallpaper-preview.jpg";
+
+}
+
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="text-center ">
+        <h1 class="display-4 tracking-in-expand">@ViewData["Title"]</h1>
+    </div>
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img src="@background" class="img-fluid rounded-3" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>@firstParTitle</strong></h4>
+            <p class="text-muted">@firstParText</p>
+            <p><strong>@secondParTitle</strong></p>
+            <p class="text-muted">@secondParText</p>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Mais sobre @ViewData["Title"]</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="@firstCardImg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Times de @ViewData["Alias"]</h5>
+                <p class="card-text">Clique em saiba mais para conhecer os maiores times de @ViewData["Name"]</p>
+                <a href="@fistCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="@secondCardImg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Curiosidades de @ViewData["Alias"]</h5>
+                <p class="card-text">Veja algumas curioidades sobre @ViewData["Alias"]</p>
+                <a href="@secondCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="@thirdCardImg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Disponivel em @ViewData["Vendor"]</h5>
+                <p class="card-text">Encontre @ViewData["Alias"] em @ViewData["Vendor"] e jogue agora mesmo!</p>
+                <a href="@ViewData["GamePage"]" target="_blank" class="btn btn-primary">Página do Jogo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->

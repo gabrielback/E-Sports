@@ -1,0 +1,121 @@
+﻿@page
+@model Esportes.Pages.hearthstoneModel
+@{
+    ViewData["Title"] = "Hearthstone";
+    ViewData["Name"] = "Hearthstone";
+    ViewData["Alias"] = "HeartStone";
+
+    ViewData["Vendor"] = "Blizzard";
+    ViewData["GamePage"] = "https://hearthstone.blizzard.com/pt-br";
+
+    var background = "./images/hearthstone.jpg";
+
+    var firstParTitle = "Sobre " + ViewData["Alias"];
+    var firstParText = (
+        $"Hearthstone, originalmente conhecido como Hearthstone: Heroes of Warcraft, é um jogo de cartas estratégico on-line desenvolvido e publicado pela empresa Blizzard Entertainment. É o primeiro jogo da empresa gratuito e também o primeiro a ser lançado para plataformas móveis. Em Hearthstone, jogadores constroem decks de cartas (chamadas 'cards' mesmo na versão em português[1]) a partir de heróis que representam dez classes (inicialmente nove) do universo de Warcraft e trocam turnos jogando cards de seus decks personalizados, usando feitiços, armas ou habilidades heroicas."
+
+    );
+
+    var secondParTitle = "O Competitivo";
+    var secondParText = "O Hearthstone Masters é o novo programa competitivo de Hearthstone em três categorias, contando com classificatórias contínuas, torneios presenciais ao redor mundo e uma competição semanal da categoria principal.";
+    var firstCardImg = "https://media-hearth.cursecdn.com/attachments/14/170/players.png";
+    var fistCardRef = "https://cardnamanga.com.br/article/546/confira-10-curiosidades-sobre-as-artes-dos-cards-de-hearthstone";
+
+
+    var secondCardImg = "https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/10/mecanica-de-dragonete-arte.jpg";
+    var secondCardRef = "https://cardnamanga.com.br/article/546/confira-10-curiosidades-sobre-as-artes-dos-cards-de-hearthstone";
+
+
+    var thirdCardImg = "https://th.bing.com/th/id/OIP.Q1Z02ZM2JwntlCrnHLFwIAHaEo?pid=ImgDet&rs=1";
+
+}
+
+
+<!--Main layout-->
+<main class="mt-5">
+    <div class="text-center ">
+        <h1 class="display-4 tracking-in-expand">@ViewData["Title"]</h1>
+    </div>
+    <div class="container">
+        <!--Section: Content-->
+        <section>
+            <div class="row">
+                <div class="col-md-6 gx-5 mb-4">
+                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                        <img src="@background" class="img-fluid rounded-3" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 gx-5 mb-4">
+                    <h4><strong>@firstParTitle</strong></h4>
+                    <p class="text-muted">@firstParText</p>
+                    <p><strong>@secondParTitle</strong></p>
+                    <p class="text-muted">@secondParText</p>
+                </div>
+            </div>
+        </section>
+        <!--Section: Content-->
+
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+            <h4 class="mb-5"><strong>Mais sobre @ViewData["Title"]</strong></h4>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@firstCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Times de @ViewData["Alias"]</h5>
+                            <p class="card-text">Clique em saiba mais para conhecer os maiores times de @ViewData["Name"]</p>
+                            <a href="@fistCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@secondCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Curiosidades de @ViewData["Alias"]</h5>
+                            <p class="card-text">Veja algumas curioidades sobre @ViewData["Alias"]</p>
+                            <a href="@secondCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@thirdCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Disponivel em @ViewData["Vendor"]</h5>
+                            <p class="card-text">Encontre @ViewData["Alias"] em @ViewData["Vendor"] e jogue agora mesmo!</p>
+                            <a href="@ViewData["GamePage"]" target="_blank" class="btn btn-primary">Página do Jogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section: Content-->
+    </div>
+</main>
+<!--Main layout-->

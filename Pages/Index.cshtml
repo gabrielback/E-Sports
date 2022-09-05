@@ -1,0 +1,89 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    ViewData["Welcome"] = "E-Sports";
+}
+<div class="body-content">
+
+    <div class="text-center">
+        <div>
+            <h1 class="display-4 tracking-in-expand m-3">@ViewData["Welcome"]</h1>
+        </div>
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade mb-5" data-mdb-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a asp-page="/counterStrike">
+                        <img src="./images/bg-csgo.jpg" class="d-block w-100 img-fluid" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a asp-page="/dota2">
+                        <img src="./images/bg-dota2.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a asp-page="/index">
+                        <img src="./images/E-sports.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>E-Sports</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a asp-page="/hearthstone">
+                        <img src="./images/hearthstone.jpg" class="d-block w-100 img-fluid" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a asp-page="leagueOfLegends">
+                        <img src="./images/bg-lol.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>League of Legends</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a asp-page="/overwatch">
+                        <img src="./images/bg-overwatch.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Overwatch</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="col-md-12 gx-5 mb-3">
+            <h4><strong>O que são E-sports?</strong></h4>
+            <p class="text-muted m-5">
+                Esportes Eletrônicos ou eSports (o termo mais usado atualmente no mundo) são uma nova modalidade surgida há poucos anos e que vêm dominando o mercado de games e atraindo legiões de jovens no mundo.
+            </p>
+            <p class="text-muted m-5">
+                Competições disputadas em games eletrônicos em que os jogadores atuam como atletas profissionais de esportes tradicionais e são assistidos por uma audiência presencial e/ou online, através de diversas plataformas de stream online ou TV.
+            </p>
+        </div>
+    </div>
+
+</div>

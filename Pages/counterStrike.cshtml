@@ -1,0 +1,122 @@
+﻿@page
+@model Esportes.Pages.counterStrikeModel
+@{
+    ViewData["Title"] = "Counter Strike";
+    ViewData["Name"] = "Counter Strike Global Offensive";
+    ViewData["Alias"] = "CSGO";
+
+    ViewData["Vendor"] = "Steam";
+    ViewData["GamePage"] = "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/";
+
+    var background = "./images/bg-csgo.jpg";
+
+    var firstParTitle = "Sobre " + ViewData["Alias"];
+    var firstParText = (
+        $"Counter-Strike: Global Offensive (CS:GO) é um jogo online desenvolvido pela Valve Corporation e pela Hidden Path Entertainment, sendo uma sequência de Counter-Strike: Source. É o quarto título principal da franquia.",
+        $"'O Counter-Strike surpreendeu a indústria de jogos quando o mod improvável se tornou o jogo de ação de PC mais jogado no mundo quase imediatamente após o seu lançamento, em agosto de 1999."
+    );
+
+    var secondParTitle = "O Competitivo";
+    var secondParText = $"O modo competitivo do ({ViewData["Alias"]}) é divido em 30 rounds, de dois minutos de duração cada um, em que a primeira equipe a vencer 16 rounds ganha a partida. Caso haja um empate, por 15 a 15, será necessária a disputa de uma prorrogação, que possui 6 rounds.";
+
+    var firstCardImg = "https://cdn.ome.lt/C-00s_RYwdsd-e7g4cT9D5o8Cs0=/770x0/smart/uploads/conteudo/fotos/times.jpg";
+    var fistCardRef = "https://www.hltv.org/ranking/teams/2022/august/15";
+
+
+    var secondCardImg = "https://cdn.cloudflare.steamstatic.com/steam/apps/730/ss_2b9e362287b509bb3864fa7bad654fe1fda0f7ed.600x338.jpg?t=1641233427";
+    var secondCardRef = "https://www.techtudo.com.br/listas/2020/03/seis-curiosidades-sobre-o-csgo-que-voce-provavelmente-nao-sabia-esports.ghtml";
+
+
+    var thirdCardImg = "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg?t=1641233427";
+
+}
+
+
+<!--Main layout-->
+<main class="mt-5">
+    <div class="text-center ">
+        <h1 class="display-4 tracking-in-expand">@ViewData["Title"]</h1>
+    </div>
+    <div class="container">
+        <!--Section: Content-->
+        <section>
+            <div class="row">
+                <div class="col-md-6 gx-5 mb-4">
+                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                        <img src="@background" class="img-fluid rounded-3" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 gx-5 mb-4">
+                    <h4><strong>@firstParTitle</strong></h4>
+                    <p class="text-muted">@firstParText</p>
+                    <p><strong>@secondParTitle</strong></p>
+                    <p class="text-muted">@secondParText</p>
+                </div>
+            </div>
+        </section>
+        <!--Section: Content-->
+
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+            <h4 class="mb-5"><strong>Mais sobre @ViewData["Title"]</strong></h4>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@firstCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Times de @ViewData["Alias"]</h5>
+                            <p class="card-text">Clique em saiba mais para conhecer os maiores times de @ViewData["Name"]</p>
+                            <a href="@fistCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@secondCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Curiosidades de @ViewData["Alias"]</h5>
+                            <p class="card-text">Veja algumas curioidades sobre @ViewData["Alias"]</p>
+                            <a href="@secondCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src="@thirdCardImg" class="img-fluid" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Disponivel em @ViewData["Vendor"]</h5>
+                            <p class="card-text">Encontre @ViewData["Alias"] em @ViewData["Vendor"] e jogue agora mesmo!</p>
+                            <a href="@ViewData["GamePage"]" target="_blank" class="btn btn-primary">Página do Jogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Section: Content-->
+    </div>
+</main>
+<!--Main layout-->

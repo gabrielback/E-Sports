@@ -1,0 +1,119 @@
+﻿@page
+@model Esportes.Pages.leagueOfLegendsModel
+@{
+    ViewData["Title"] = "League of Legends";
+    ViewData["Name"] = "League of Legends";
+    ViewData["Alias"] = "LOL";
+
+    ViewData["Vendor"] = "(Site-Oficial)";
+    ViewData["GamePage"] = "https://www.leagueoflegends.com/pt-br/";
+
+    var background = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/2015_League_of_Legends_World_Championship.jpg/1280px-2015_League_of_Legends_World_Championship.jpg";
+
+    var firstParTitle = "Sobre "+ViewData["Alias"];
+    var firstParText = "League of Legends (abreviado como LoL e comumente referido como League) é um jogo eletrônico do gênero multiplayer online battle arena (MOBA) desenvolvido e publicado pela Riot Games. Foi lançado em outubro de 2009 para Microsoft Windows e em março de 2013 para macOS. Inspirado em Defense of the Ancients (DotA), uma modificação de Warcraft III, os fundadores da Riot buscaram desenvolver um jogo autônomo do mesmo gênero. Desde o seu lançamento, o título é gratuito para jogar e monetizado por meio de personalização de personagens, a qual é obtenível através de uma moeda virtual comprável com dinheiro real.";
+
+    var secondParTitle = "O Competitivo";
+    var secondParText = "League of Legends é um dos jogos que possuem o cenário competitivo mais consolidado dentro dos eSports. Isso, além de fruto de uma comunidade apaixonada, se deve ao trabalho da Riot Games, desenvolvedora do jogo e única responsável pelo circuito de campeonatos oficiais do LoL. O ge montou um guia explicativo, destrinchando como funciona o cenário competitivo de League of Legends: formatos de competição, os principais torneios e como chegar a um time profissional.";
+
+    var firstCardImg = "./images/lol-card1.jpg";
+    var fistCardRef = "https://liquipedia.net/leagueoflegends/Portal:Teams";
+
+
+    var secondCardImg = "https://t.ctcdn.com.br/pERwOiaTEXWBWPLo64f5T-BNh38=/1024x0/smart/i536826.jpeg";
+    var secondCardRef = "https://canaltech.com.br/games/curiosidades-sobre-league-of-legends/";
+
+
+    var thirdCardImg = "https://p4.wallpaperbetter.com/wallpaper/273/420/988/league-of-legends-lol-characters-power-war-wallpaper-preview.jpg";
+
+}
+
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="text-center ">
+        <h1 class="display-4 tracking-in-expand">@ViewData["Title"]</h1>
+    </div>
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+              <img src="@background" class="img-fluid rounded-3" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>@firstParTitle</strong></h4>
+            <p class="text-muted">@firstParText</p>
+            <p><strong>@secondParTitle</strong></p>
+            <p class="text-muted">@secondParText</p>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Mais sobre @ViewData["Title"]</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="@firstCardImg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Times de @ViewData["Alias"]</h5>
+                <p class="card-text">Clique em saiba mais para conhecer os maiores times de @ViewData["Name"]</p>
+                <a href="@fistCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="@secondCardImg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Curiosidades de @ViewData["Alias"]</h5>
+                <p class="card-text">Veja algumas curioidades sobre @ViewData["Alias"]</p>
+                <a href="@secondCardRef" target="_blank" class="btn btn-primary">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="@thirdCardImg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Disponivel em @ViewData["Vendor"]</h5>
+                <p class="card-text">Encontre @ViewData["Alias"] em @ViewData["Vendor"] e jogue agora mesmo!</p>
+                <a href="@ViewData["GamePage"]" target="_blank" class="btn btn-primary">Página do Jogo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
